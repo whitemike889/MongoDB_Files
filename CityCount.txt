@@ -1,7 +1,34 @@
 db.zipcodes.aggregate( 
-[ 
-  { $group:   { _id: {state: "$state", city: "$city"}}}, 
-  { $group:   { _id: "$_id.state", numberOfCities:{$sum:1}}},
-  { $sort:    { numberOfCities:-1}}, 
-  { $project: {_id:0, numberOfCities:1, state: "$_id"}} 
-] );
+  [
+    { $group:   { _id: {state: "$state", city: "$city" } } },
+    { $group:   { _id: "$_id.state", numberOfCities: { $sum:1 } } },
+    { $sort:    { numberOfCities:-1 } },
+    { $project: { _id:0, numberOfCities:1, state: "$_id" } }
+  ]
+);
+
+db.zipcodes.aggregate(
+  [
+    { $unwind: { path: "$loc",
+                 includeArrayIndex: "longlat" }
+    },
+    { $group:  { _id: { longlat: "$longlat" },
+                 midpoint: { $avg:"$loc" }
+               }
+    },
+    { $sort:   {"_id.state":1, "_id.longlat":1} }
+  ]
+)
+
+db.zipcodes.aggregate(
+  [
+    { $unwind: { path: "$loc",
+                 includeArrayIndex: "longlat" }
+    },
+    { $group:  { _id: { state:"$state",  longlat: "$longlat" },
+                 midpoint: { $avg:"$loc" }
+               }
+    },
+    { $sort:   {"_id.state":1, "_id.longlat":1} }
+  ]
+)
