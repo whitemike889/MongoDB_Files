@@ -1,0 +1,33 @@
+{  _id : "ruth",       joined : ISODate("2015-01-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball"]}
+{  _id : "harold",     joined : ISODate("2016-01-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball"]}
+{  _id : "kate",       joined : ISODate("2011-01-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball", "handball"]}
+{  _id : "jill",       joined : ISODate("2015-02-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball", "handball"]}
+{  _id : "dean",       joined : ISODate("2012-02-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball"]}
+{  _id : "shiloh",     joined : ISODate("2015-02-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball", "handball"]}
+{  _id : "nathan",     joined : ISODate("2014-02-02T01:00:00+06:00"), likes : ["golf", "swimming", "handball"]}
+{  _id : "tari",       joined : ISODate("2011-02-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball", "handball"]}
+{  _id : "jared",      joined : ISODate("2016-02-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball"]}
+{  _id : "gary",       joined : ISODate("2013-02-02T01:00:00+06:00"), likes : ["tennis", "golf", "racquetball", "handball"]}
+{  _id : "chris",      joined : ISODate("2011-02-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball", "handball"]}
+{  _id : "casey",      joined : ISODate("2012-02-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball"]}
+{  _id : "sam",        joined : ISODate("2011-03-02T01:00:00+06:00"), likes : ["golf", "racquetball", "handball"]}
+{  _id : "henry",      joined : ISODate("2010-03-02T01:00:00+06:00"), likes : ["golf", "racquetball"]}
+{  _id : "laura",      joined : ISODate("2014-03-02T01:00:00+06:00"), likes : ["golf", "racquetball"]}
+{  _id : "christiaan", joined : ISODate("2012-03-02T01:00:00+06:00"), likes : ["golf", "racquetball", "handball"]}
+{  _id : "jane",       joined : ISODate("2011-03-02T01:00:00+06:00"), likes : ["golf", "racquetball"]}
+{  _id : "joe",        joined : ISODate("2010-07-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball", "handball"]}
+{  _id : "tim",        joined : ISODate("2012-04-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball"]}
+{  _id : "jr",         joined : ISODate("2011-04-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball", "handball"]}
+{  _id : "austin",     joined : ISODate("2010-04-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball"]}
+{  _id : "hannah",     joined : ISODate("2011-05-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball", "handball"]}
+{  _id : "liz",        joined : ISODate("2014-05-02T01:00:00+06:00"), likes : ["tennis", "golf", "racquetball", "handball"]}
+{  _id : "samuel",     joined : ISODate("2016-06-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball", "handball"]}
+{  _id : "gregory",    joined : ISODate("2013-06-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball"]}
+{  _id : "abbie",      joined : ISODate("2016-07-02T01:00:00+06:00"), likes : ["tennis", "golf", "racquetball", "handball", "handball"]}
+{  _id : "imogen",     joined : ISODate("2011-07-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball"]}
+{  _id : "ammon",      joined : ISODate("2009-08-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball", "handball"]}
+{  _id : "shane",      joined : ISODate("2010-09-02T01:00:00+06:00"), likes : ["tennis", "golf", "swimming", "racquetball"]}
+{  _id : "claudia",    joined : ISODate("2013-09-02T01:00:00+06:00"), likes : ["tennis", "golf", "handball"]}
+{  _id : "sarah",      joined : ISODate("2016-10-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball"]}
+{  _id : "willliam",   joined : ISODate("2012-11-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball", "handball"]}
+{  _id : "madison",    joined : ISODate("2014-12-02T01:00:00+06:00"), likes : ["golf", "swimming", "racquetball"]}

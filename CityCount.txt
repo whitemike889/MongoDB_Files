@@ -1,0 +1,7 @@
+db.zipcodes.aggregate( 
+[ 
+  { $group:   { _id: {state: "$state", city: "$city"}}}, 
+  { $group:   { _id: "$_id.state", numberOfCities:{$sum:1}}},
+  { $sort:    { numberOfCities:-1}}, 
+  { $project: {_id:0, numberOfCities:1, state: "$_id"}} 
+] );
