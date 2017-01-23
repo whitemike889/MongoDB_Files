@@ -5,7 +5,7 @@
     age: 19,
     type: 1,
     status: "P",
-    favorites: { artist: "Picasso", food: "peanuts" },
+    favorites: { artist: "Picasso", food: "pizza" },
     finished: [ 17, 3 ],
     badges: [ "blue", "black" ],
     points: [
