@@ -52,3 +52,59 @@ db.courses.insert( { course: 502, name: 'Riverboat Gambling' } )
 db.courses.insert( { course: 503, name: 'Narcissistic Mimes' } )
 db.courses.insert( { course: 504, name: 'Hereditary Loops' } )
 db.courses.insert( { course: 505, name: 'Temporal Hiccups' } )
+
+ db.students.aggregate( { $match: { name: "Agamemnon" } } )
+ 
+ db.students.aggregate( { $match: { name: "Agamemnon" } }
+ , { $project: { _id:0, rank:0, year:0} } )
+  
+ db.students.aggregate( { $match: { name: "Agamemnon" } }
+ , { $project: { _id:0, rank:0, year:0} }
+ , { $unwind: "$courses" } )
+ 
+ db.students.aggregate( { $match: { name: "Agamemnon" } }
+ , { $project: { _id:0, rank:0, year:0} }
+ , { $unwind: "$courses" }
+ , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
+ , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
+ )
+ 
+ db.students.aggregate( { $match: { name: "Agamemnon" } }
+ , { $project: { _id:0, rank:0, year:0} }
+ , { $unwind: "$courses" }
+ , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
+ , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
+ , { $unwind: "$grades" }
+)
+
+ db.students.aggregate( { $match: { name: "Agamemnon" } }
+ , { $project: { _id:0, rank:0, year:0} }
+ , { $unwind: "$courses" }
+ , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
+ , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
+ , { $unwind: "$grades" }
+ , { $lookup: { from: "courses", localField: "grades.course", foreignField: "course", as: "gradedCourseName" } }
+ , { $project: { "grades.course":0, "gradedCourseName._id":0, "gradedCourseName.course":0 } }
+)
+ 
+ db.students.aggregate( { $match: { name: "Agamemnon" } }
+ , { $project: { _id:0, rank:0, year:0} }
+ , { $unwind: "$courses" }
+ , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
+ , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
+ , { $unwind: "$grades" }
+ , { $lookup: { from: "courses", localField: "grades.course", foreignField: "course", as: "gradedCourseName" } }
+ , { $project: { "grades.course":0, "gradedCourseName._id":0, "gradedCourseName.course":0 } }
+ , { $unwind: "$gradedCourseName" }, {$unwind: "$courseName" } )
+ 
+ db.students.aggregate( { $match: { name: "Agamemnon" } }
+ , { $project: { _id:0, rank:0, year:0} }
+ , { $unwind: "$courses" }
+ , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
+ , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
+ , { $unwind: "$grades" }
+ , { $lookup: { from: "courses", localField: "grades.course", foreignField: "course", as: "gradedCourseName" } }
+ , { $project: { "grades.course":0, "gradedCourseName._id":0, "gradedCourseName.course":0 } }
+ , { $unwind: "$gradedCourseName" }, {$unwind: "$courseName" }
+ , { $project: { name:1, grade: "$grades.grade", previous: "$gradedCourseName.name", current: "$courseName.name" } }
+ )
