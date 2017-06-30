@@ -1,30 +1,30 @@
 db.students.drop()
-db.students.insert({name:'Agamemnon',  rank:  1, major: "Ventriloquism",  year:'2-Sophomore', courses: [204, 202, 201],           grades:[{course:102, grade:79},{ course:103, grade:74},{ course:101, grade:94}]})
-db.students.insert({name:'Betelgeuse', rank:  2, major: "Aerialist",      year:'3-Junior',    courses: [301, 302, 205],           grades:[{course:203, grade:43},{ course:201, grade:66},{ course:205, grade:96}]})
-db.students.insert({name:'Cassiopeia', rank:  3, major: "Ven Diagrams",   year:'2-Sophomore', courses: [201, 202, 205, 102],      grades:[{course:103, grade:98},{ course:104, grade:52},{ course:101, grade:86}]})
-db.students.insert({name:'D,Artagnan', rank:  4, major: "Hop Scotch",     year:'3-Junior',    courses: [204, 102],                grades:[{course:201, grade:94},{ course:205, grade:73},{ course:305, grade:73},{ course:301, grade:86}]})
-db.students.insert({name:'Einstein',   rank:  5, major: "Hop Scotch",     year:'4-Senior',    courses: [401, 405],                grades:[{course:403, grade:89},{ course:401, grade:89},{ course:301, grade:89}]})
-db.students.insert({name:'Franklin',   rank:  6, major: "Aerialist",      year:'4-Senior',    courses: [401, 402, 304, 305],      grades:[{course:403, grade:52},{ course:204, grade:68},{ course:303, grade:36}]})
-db.students.insert({name:'Gabriela',   rank:  7, major: "Hop Scotch",     year:'2-Sophomore', courses: [201, 202, 205, 204],      grades:[{course:104, grade:52},{ course:101, grade:64},{ course:105, grade:95}]})
-db.students.insert({name:'Hamilton',   rank:  8, major: "Ven Diagrams",   year:'3-Junior',    courses: [301, 403, 404],           grades:[{course:205, grade:88},{ course:201, grade:99},{ course:102, grade:52},{ course:105, grade:89}]})
-db.students.insert({name:'Israel',     rank:  9, major: "Ventriloquism",  year:'1-Freshman',  courses: [101, 102, 201, 202],      grades:[{course:103, grade:80},{ course:104, grade:83},{ course:105, grade:57}]})
-db.students.insert({name:'Jacobus',    rank: 10, major: "Hop Scotch",     year:'2-Sophomore', courses: [202, 203, 301, 302],      grades:[{course:202, grade:67},{ course:203, grade:70},{ course:105, grade:65}]})
-db.students.insert({name:'Kadeem',     rank: 11, major: "Aerialist",      year:'4-Senior',    courses: [401, 402, 405],           grades:[{course:303, grade:87},{ course:302, grade:44},{ course:304, grade:50}]})
-db.students.insert({name:'Lafayette',  rank: 12, major: "Ven Diagrams",   year:'2-Sophomore', courses: [201, 203, 301, 202],      grades:[{course:101, grade:55},{ course:102, grade:89},{ course:105, grade:79}]})
-db.students.insert({name:'Melchior',   rank: 13, major: "Aerialist",      year:'3-Junior',    courses: [301, 302, 303, 305, 304], grades:[{course:201, grade:74},{ course:105, grade:85},{ course:205, grade:70}]})
-db.students.insert({name:'Napoleon',   rank: 14, major: "Wingman",        year:'4-Senior',    courses: [401, 301, 404],           grades:[{course:303, grade:75},{ course:202, grade:57},{ course:302, grade:75},{ course:402, grade:71}]})
-db.students.insert({name:'Ophelia',    rank: 15, major: "Aerialist",      year:'1-Freshman',  courses: [101, 102, 103, 104],      grades:[{course:103, grade:79},{ course:101, grade:99},{ course:102, grade:78}]})
-db.students.insert({name:'Persephone', rank: 16, major: "Wingman",        year:'1-Freshman',  courses: [101, 201, 202],           grades:[{course:103, grade:64},{ course:101, grade:85},{ course:105, grade:87}]})
-db.students.insert({name:'Quentin',    rank: 17, major: "Ventriloquism",  year:'3-Junior',    courses: [301, 202, 305, 304],      grades:[{course:203, grade:96},{ course:205, grade:46},{ course:305, grade:75}]})
-db.students.insert({name:'Rafferty',   rank: 18, major: "Ven Diagrams",   year:'2-Sophomore', courses: [202, 204, 201, 205, 203], grades:[{course:201, grade:90},{ course:104, grade:87},{ course:105, grade:55}]})
-db.students.insert({name:'Sabrina',    rank: 19, major: "Obtuse Thought", year:'1-Freshman',  courses: [101, 102, 103, 202],      grades:[{course:103, grade:55},{ course:102, grade:64},{ course:101, grade:83}]})
-db.students.insert({name:'Tabitha',    rank: 20, major: "Reincarnation",  year:'1-Freshman',  courses: [102, 103, 201],           grades:[{course:103, grade:29},{ course:101, grade:76},{ course:104, grade:75},{ course:202, grade:81}]})
-db.students.insert({name:'Umberto',    rank: 21, major: "Obtuse Thought", year:'3-Junior',    courses: [301, 302, 403],           grades:[{course:202, grade:74},{ course:304, grade:64},{ course:105, grade:86}]})
-db.students.insert({name:'Veronica',   rank: 22, major: "Ventriloquism",  year:'2-Sophomore', courses: [202, 301, 203],           grades:[{course:102, grade:70},{ course:101, grade:73},{ course:105, grade:83}]})
-db.students.insert({name:'Washington', rank: 23, major: "Reincarnation",  year:'2-Sophomore', courses: [201, 203, 201, 302],      grades:[{course:104, grade:59},{ course:103, grade:65},{ course:105, grade:99},{ course:204, grade:73}]})
-db.students.insert({name:'Xanthus',    rank: 24, major: "Reincarnation",  year:'4-Senior',    courses: [401, 402, 405, 305],      grades:[{course:203, grade:74},{ course:301, grade:73},{ course:302, grade:90}]})
-db.students.insert({name:'Yaeger',     rank: 25, major: "Petroglyphs",    year:'3-Junior',    courses: [301, 102, 301, 305],      grades:[{course:204, grade:92},{ course:301, grade:57},{ course:205, grade:45},{ course:304, grade:91}]})
-db.students.insert({name:'Zachariah',  rank: 26, major: "Aerialist",      year:'4-Senior',    courses: [401, 302, 201, 102],      grades:[{course:403, grade:61},{ course:204, grade:30},{ course:301, grade:63}]})
+db.students.insert({name:'Agamemnon',  income: 81800, rank:  1, major: "Ventriloquism",  year:'2-Sophomore', courses: [204, 202, 201],           grades:[{course:102, grade:79},{ course:103, grade:74},{ course:101, grade:94}]})
+db.students.insert({name:'Betelgeuse', income: 92900, rank:  2, major: "Aerialist",      year:'3-Junior',    courses: [301, 302, 205],           grades:[{course:203, grade:43},{ course:201, grade:66},{ course:205, grade:96}]})
+db.students.insert({name:'Cassiopeia', income: 03000, rank:  3, major: "Ven Diagrams",   year:'2-Sophomore', courses: [201, 202, 205, 102],      grades:[{course:103, grade:98},{ course:104, grade:52},{ course:101, grade:86}]})
+db.students.insert({name:'D,Artagnan', income: 04000, rank:  4, major: "Hop Scotch",     year:'3-Junior',    courses: [204, 102],                grades:[{course:201, grade:94},{ course:205, grade:73},{ course:305, grade:73},{ course:301, grade:86}]})
+db.students.insert({name:'Einstein',   income: 05000, rank:  5, major: "Hop Scotch",     year:'4-Senior',    courses: [401, 405],                grades:[{course:403, grade:89},{ course:401, grade:89},{ course:301, grade:89}]})
+db.students.insert({name:'Franklin',   income: 06000, rank:  6, major: "Aerialist",      year:'4-Senior',    courses: [401, 402, 304, 305],      grades:[{course:403, grade:52},{ course:204, grade:68},{ course:303, grade:36}]})
+db.students.insert({name:'Gabriela',   income: 37300, rank:  7, major: "Hop Scotch",     year:'2-Sophomore', courses: [201, 202, 205, 204],      grades:[{course:104, grade:52},{ course:101, grade:64},{ course:105, grade:95}]})
+db.students.insert({name:'Hamilton',   income: 28000, rank:  8, major: "Ven Diagrams",   year:'3-Junior',    courses: [301, 403, 404],           grades:[{course:205, grade:88},{ course:201, grade:99},{ course:102, grade:52},{ course:105, grade:89}]})
+db.students.insert({name:'Israel',     income: 59500, rank:  9, major: "Ventriloquism",  year:'1-Freshman',  courses: [101, 102, 201, 202],      grades:[{course:103, grade:80},{ course:104, grade:83},{ course:105, grade:57}]})
+db.students.insert({name:'Jacobus',    income: 81000, rank: 10, major: "Hop Scotch",     year:'2-Sophomore', courses: [202, 203, 301, 302],      grades:[{course:202, grade:67},{ course:203, grade:70},{ course:105, grade:65}]})
+db.students.insert({name:'Kadeem',     income: 90300, rank: 11, major: "Aerialist",      year:'4-Senior',    courses: [401, 402, 405],           grades:[{course:303, grade:87},{ course:302, grade:44},{ course:304, grade:50}]})
+db.students.insert({name:'Lafayette',  income: 01200, rank: 12, major: "Ven Diagrams",   year:'2-Sophomore', courses: [201, 203, 301, 202],      grades:[{course:101, grade:55},{ course:102, grade:89},{ course:105, grade:79}]})
+db.students.insert({name:'Melchior',   income: 03300, rank: 13, major: "Aerialist",      year:'3-Junior',    courses: [301, 302, 303, 305, 304], grades:[{course:201, grade:74},{ course:105, grade:85},{ course:205, grade:70}]})
+db.students.insert({name:'Napoleon',   income: 03300, rank: 14, major: "Wingman",        year:'4-Senior',    courses: [401, 301, 404],           grades:[{course:303, grade:75},{ course:202, grade:57},{ course:302, grade:75},{ course:402, grade:71}]})
+db.students.insert({name:'Ophelia',    income: 01400, rank: 15, major: "Aerialist",      year:'1-Freshman',  courses: [101, 102, 103, 104],      grades:[{course:103, grade:79},{ course:101, grade:99},{ course:102, grade:78}]})
+db.students.insert({name:'Persephone', income: 35500, rank: 16, major: "Wingman",        year:'1-Freshman',  courses: [101, 201, 202],           grades:[{course:103, grade:64},{ course:101, grade:85},{ course:105, grade:87}]})
+db.students.insert({name:'Quentin',    income: 26700, rank: 17, major: "Ventriloquism",  year:'3-Junior',    courses: [301, 202, 305, 304],      grades:[{course:203, grade:96},{ course:205, grade:46},{ course:305, grade:75}]})
+db.students.insert({name:'Rafferty',   income: 57800, rank: 18, major: "Ven Diagrams",   year:'2-Sophomore', courses: [202, 204, 201, 205, 203], grades:[{course:201, grade:90},{ course:104, grade:87},{ course:105, grade:55}]})
+db.students.insert({name:'Sabrina',    income: 18900, rank: 19, major: "Obtuse Thought", year:'1-Freshman',  courses: [101, 102, 103, 202],      grades:[{course:103, grade:55},{ course:102, grade:64},{ course:101, grade:83}]})
+db.students.insert({name:'Tabitha',    income: 39000, rank: 20, major: "Reincarnation",  year:'1-Freshman',  courses: [102, 103, 201],           grades:[{course:103, grade:29},{ course:101, grade:76},{ course:104, grade:75},{ course:202, grade:81}]})
+db.students.insert({name:'Umberto',    income: 10100, rank: 21, major: "Obtuse Thought", year:'3-Junior',    courses: [301, 302, 403],           grades:[{course:202, grade:74},{ course:304, grade:64},{ course:105, grade:86}]})
+db.students.insert({name:'Veronica',   income: 31200, rank: 22, major: "Ventriloquism",  year:'2-Sophomore', courses: [202, 301, 203],           grades:[{course:102, grade:70},{ course:101, grade:73},{ course:105, grade:83}]})
+db.students.insert({name:'Washington', income: 32300, rank: 23, major: "Reincarnation",  year:'2-Sophomore', courses: [201, 203, 201, 302],      grades:[{course:104, grade:59},{ course:103, grade:65},{ course:105, grade:99},{ course:204, grade:73}]})
+db.students.insert({name:'Xanthus',    income: 13400, rank: 24, major: "Reincarnation",  year:'4-Senior',    courses: [401, 402, 405, 305],      grades:[{course:203, grade:74},{ course:301, grade:73},{ course:302, grade:90}]})
+db.students.insert({name:'Yaeger',     income: 55000, rank: 25, major: "Petroglyphs",    year:'3-Junior',    courses: [301, 102, 301, 305],      grades:[{course:204, grade:92},{ course:301, grade:57},{ course:205, grade:45},{ course:304, grade:91}]})
+db.students.insert({name:'Zachariah',  income: 20100, rank: 26, major: "Aerialist",      year:'4-Senior',    courses: [401, 302, 201, 102],      grades:[{course:403, grade:61},{ course:204, grade:30},{ course:301, grade:63}]})
 
 db.courses.drop()
 db.courses.insert( { course: 101, name: 'Applied Neo-Geology' } )
@@ -56,21 +56,21 @@ db.courses.insert( { course: 505, name: 'Temporal Hiccups' } )
  db.students.aggregate( { $match: { name: "Agamemnon" } } )
  
  db.students.aggregate( { $match: { name: "Agamemnon" } }
- , { $project: { _id:0, rank:0, year:0} } )
+ , { $project: { _id:0, incomePotential:0, rank:0, year:0} } )
   
  db.students.aggregate( { $match: { name: "Agamemnon" } }
- , { $project: { _id:0, rank:0, year:0} }
+ , { $project: { _id:0, incomePotential:0, rank:0, year:0} }
  , { $unwind: "$courses" } )
  
  db.students.aggregate( { $match: { name: "Agamemnon" } }
- , { $project: { _id:0, rank:0, year:0} }
+ , { $project: { _id:0, incomePotential:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
  , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
  )
  
  db.students.aggregate( { $match: { name: "Agamemnon" } }
- , { $project: { _id:0, rank:0, year:0} }
+ , { $project: { _id:0, incomePotential:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
  , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
@@ -78,7 +78,7 @@ db.courses.insert( { course: 505, name: 'Temporal Hiccups' } )
 )
 
  db.students.aggregate( { $match: { name: "Agamemnon" } }
- , { $project: { _id:0, rank:0, year:0} }
+ , { $project: { _id:0, incomePotential:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
  , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
@@ -88,7 +88,7 @@ db.courses.insert( { course: 505, name: 'Temporal Hiccups' } )
 )
  
  db.students.aggregate( { $match: { name: "Agamemnon" } }
- , { $project: { _id:0, rank:0, year:0} }
+ , { $project: { _id:0, incomePotential:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
  , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
@@ -98,7 +98,7 @@ db.courses.insert( { course: 505, name: 'Temporal Hiccups' } )
  , { $unwind: "$gradedCourseName" }, {$unwind: "$courseName" } )
  
  db.students.aggregate( { $match: { name: "Agamemnon" } }
- , { $project: { _id:0, rank:0, year:0} }
+ , { $project: { _id:0, incomePotential:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
  , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
@@ -108,3 +108,13 @@ db.courses.insert( { course: 505, name: 'Temporal Hiccups' } )
  , { $unwind: "$gradedCourseName" }, {$unwind: "$courseName" }
  , { $project: { name:1, grade: "$grades.grade", previous: "$gradedCourseName.name", current: "$courseName.name" } }
  )
+
+group students by class
+db.students.aggregate ( [ { '$facet': {
+ 	  "Class":  [ { $bucketAuto: { groupBy: "$year",  buckets: 5, output: { "count": { $sum: 1 }, "students": { $push: "$name"                            }   } } } ]
+	, "Major":  [ { $bucketAuto: { groupBy: "$major", buckets: 7, output: { "count": { $sum: 1 }, "students": { $push: { "name": "$name", "year": "$year" } } } } } ]
+	, "Income": [ { $bucket:     { groupBy: "$income",boundaries: [  0, 20000, 40000, 60000, 80000 ],  default: "80K+",
+														  output: { "count": { $sum: 1 }, "students": { $push: { "Income": "$income", "Major": "$major"   } } } } } ]
+                  } } ] )
+
+
