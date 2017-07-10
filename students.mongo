@@ -226,3 +226,72 @@ $project: { _id: 0, name: 1, major: 1,
 	}}  }
 }])
 
+db.scores.aggregate( [
+  {
+    $project:
+      {
+        _id:0, "student" : 1, homework:1, "average": { $avg : "$homework" },
+        "summary" :
+        {
+          $switch:
+            {
+              branches: [
+                {
+                  case: { $gte : [ { $avg : "$homework" }, 90 ] },
+                  then: "Doing great!"
+                }
+                , {
+                  case: { $and : [ { $gte : [ { $avg : "$homework" }, 80 ] },
+                                   { $lt  : [ { $avg : "$homework" }, 90 ] } ] },
+                  then: "Doing pretty well."
+                }
+                , {
+                  case: { $gte : [ { $avg : "$homework" }, 0 ] },
+                  then: "Needs improvement."
+                }
+              ],
+              default: "No homework found."
+            }
+         }
+      }
+   }
+] )
+
+{ $group: { _id: { $year:"$registrationDate" }, 
+	totalIncome: { $sum: "$income" }, 
+	averageIncome: { $avg: "$income" }, 
+	minIncome: { $min: "$income" }, 
+	maxIncome: { $max: "$income" }, 
+	count: { $sum: 1 } } }
+
+st.aggregate(
+{ $group: {
+	_id: { $year: "$registrationDate"},
+	totalIncome:	{ $sum: "$income" },
+	averageIncome:	{ $avg: "$income" },
+	minIncome:	{ $min: "$income" },
+	maxIncome:	{ $max: "$income" },
+	stdDev:	{ $stdDevPop: "$income" },
+	count:	{ $sum: 1 },
+	xyz: {first: }
+	}
+}
+, {
+	$project: {
+		_id: 1, totalIncome:1, minIncome:1, maxIncome:1, count:1,
+		aveIncome: { $trunc: "$averageIncome" }
+	}
+}
+)
+
+st.aggregate(
+[
+	{
+	$group:
+		{
+			_id: { year: { $year: "$registrationDate"}},
+			students: { $push:  { name: "$name", major: "$major" } }
+		}
+	}
+]
+)
