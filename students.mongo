@@ -160,24 +160,25 @@ db.AB_Testing.insert({ "_id" : 7, "A" : [ "lo", "med" ], "B" : [ [ "lo", "med" ]
 db.AB_Testing.insert({ "_id" : 8, "A" : [ ], "B" : [ ] })
 db.AB_Testing.insert({ "_id" : 9, "A" : [ ], "B" : [ "lo" ] })
 
+st = db.students
 
- db.students.aggregate( { $match: { name: "Agamemnon" } } )
+db.students.aggregate( { $match: { name: "Agamemnon" } } )
  
- db.students.aggregate( { $match: { name: "Agamemnon" } }
+db.students.aggregate( { $match: { name: "Agamemnon" } }
  , { $project: { _id:0, incomePotential:0, id:0, rank:0, year:0} } )
   
- db.students.aggregate( { $match: { name: "Agamemnon" } }
+db.students.aggregate( { $match: { name: "Agamemnon" } }
  , { $project: { _id:0, incomePotential:0, id:0, rank:0, year:0} }
  , { $unwind: "$courses" } )
  
- db.students.aggregate( { $match: { name: "Agamemnon" } }
+db.students.aggregate( { $match: { name: "Agamemnon" } }
  , { $project: { _id:0, incomePotential:0, id:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
  , { $project: { courses:0, "courseName._id":0, "courseName.course":0 } } 
  )
  
- db.students.aggregate( { $match: { name: "Agamemnon" } }
+db.students.aggregate( { $match: { name: "Agamemnon" } }
  , { $project: { _id:0, incomePotential:0, id:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
@@ -185,7 +186,7 @@ db.AB_Testing.insert({ "_id" : 9, "A" : [ ], "B" : [ "lo" ] })
  , { $unwind: "$grades" }
 )
 
- db.students.aggregate( { $match: { name: "Agamemnon" } }
+db.students.aggregate( { $match: { name: "Agamemnon" } }
  , { $project: { _id:0, incomePotential:0, id:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
@@ -195,7 +196,7 @@ db.AB_Testing.insert({ "_id" : 9, "A" : [ ], "B" : [ "lo" ] })
  , { $project: { "grades.course":0, "gradedCourseName._id":0, "gradedCourseName.course":0 } }
 )
  
- db.students.aggregate( { $match: { name: "Agamemnon" } }
+db.students.aggregate( { $match: { name: "Agamemnon" } }
  , { $project: { _id:0, incomePotential:0, id:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
@@ -205,7 +206,7 @@ db.AB_Testing.insert({ "_id" : 9, "A" : [ ], "B" : [ "lo" ] })
  , { $project: { "grades.course":0, "gradedCourseName._id":0, "gradedCourseName.course":0 } }
  , { $unwind: "$gradedCourseName" }, {$unwind: "$courseName" } )
  
- db.students.aggregate( { $match: { name: "Agamemnon" } }
+db.students.aggregate( { $match: { name: "Agamemnon" } }
  , { $project: { _id:0, incomePotential:0, id:0, rank:0, year:0} }
  , { $unwind: "$courses" }
  , { $lookup: { from: "courses", localField: "courses", foreignField: "course", as: "courseName" } }
@@ -269,6 +270,7 @@ db.scores.aggregate( [
    }
 ] )
 
+st.aggregate(
 { $group: { _id: { $year:"$registrationDate" }, 
 	totalIncome: { $sum: "$income" }, 
 	averageIncome: { $avg: "$income" }, 
